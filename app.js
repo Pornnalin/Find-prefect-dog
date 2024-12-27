@@ -1,4 +1,3 @@
-console.log(window.API_KEY);
 CreateWord();
 const form = document.querySelector("#form");
 const searchBox = document.querySelector("#inputbox");
@@ -116,7 +115,7 @@ async function CreateWord() {
 
 async function request() {
   try {
-    axios.defaults.headers.common["x-api-key"] = window.API_KEY;
+    axios.defaults.headers.common["x-api-key"] = "API_Key";
 
     let res = await axios.get("https://api.thedogapi.com/v1/breeds/");
     return res.data;
